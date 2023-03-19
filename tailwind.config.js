@@ -27,6 +27,8 @@ module.exports = {
           light: "var(--color-primary-light)",
           DEFAULT: "var(--color-primary)",
           dark: "var(--color-primary-dark)",
+          pink : "#d9706a",
+          black : "#222831"
         },
         accent: {
           light: "var(--color-accent-light)",
@@ -35,12 +37,15 @@ module.exports = {
         },
         bgCoreTeam: "#F8F8F8",
         "primary": "#164A41",
+        "black-primary" : "#222831",
+        "pink-primary" : "#d9706a"
       },
       fontFamily: {
         // body: ['Open Sans', 'sans-serif'],
         body: ["hk_grotesk", "sans-serif"],
         inter: ["Inter", "sans-serif"],
         cabinet: ["Cabinet Grotesk", "sans-serif"],
+        imb : ["IMB Flex Sans","sans-serif"]
       },
       fontSize: {
         "16px":"16px",
@@ -286,6 +291,7 @@ module.exports = {
       },
     },
   },
+
   plugins: [require("@tailwindcss/aspect-ratio", '@tailwindcss/forms' )],
   variants: {
     // ...

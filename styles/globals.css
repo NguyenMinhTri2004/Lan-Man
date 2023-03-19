@@ -1,3 +1,22 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+body {
+  margin: 0;
+}
+
+a {
+   text-decoration: none;
+}
+
+.slick-slide {
+      margin: 0 27px;
+  }
+
+  /* the parent */
+  .slick-list {
+      margin: 0 -27px;
+
+      height : 600px;
+  }
