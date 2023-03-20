@@ -1,16 +1,15 @@
 import React from 'react'
 import Section , {SectionBody , SectionTitle} from '@/common/components/Section'
 import Image from 'next/image'
-import Button from '@/common/components/Button'
 import Wrapper from '@/common/components/Wrapper'
 import Notify from '@/common/components/Notify'
 
 const Blog = () => {
   return (
     <div className="bg-no-repeat bg-cover bg-[url('/images/bg-about.png')]  " >
-        <div className="bg-black-primary text-white" >
+        <div className="bg-black-primary/90  text-white" >
             <Section>
-                   <SectionTitle>
+                   <SectionTitle color = "white" >
                         <p className="text-white" > Mọi người quan tâm</p>
                    </SectionTitle>
 

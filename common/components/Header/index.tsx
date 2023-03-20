@@ -43,7 +43,10 @@ const Header = () => {
                         
 
                          <div className = "cursor-pointer   md:block xs:hidden "  >
-                             <p>THÔNG TIN SHOP</p>
+                             <Link href = "/about"  >
+                                   <p className = {` ${router.pathname === "/about" ? "text-pink-primary" : "text-white"}  no-underline`} >THÔNG TIN SHOP</p>   
+                             </Link>
+                             
                          </div>
                   
                  <div className = "cursor-pointer   md:block xs:hidden mr-5"  >
