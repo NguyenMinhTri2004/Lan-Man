@@ -1,66 +1,29 @@
-import React from 'react'
-import "slick-carousel/slick/slick.css"
-import "slick-carousel/slick/slick-theme.css"
-import Slider from "react-slick"
+import React, { useEffect } from 'react'
+import AOS from "aos"
+import "aos/dist/aos.css"
 import Button from '@/common/components/Button'
 import Wrapper from '@/common/components/Wrapper'
 import Notify from '@/common/components/Notify'
 import Section , {SectionBody , SectionTitle} from '@/common/components/Section'
 import Image from 'next/image'
+import Slide from '@/common/components/Slide'
 
 const Home = () => {
 
-  var settings = {
-    customPaging: function() {
-      return (
-        <div className="w-[15px] h-[15px] rounded-full bg-[#fbcfbd] " ></div>
-      );
-    },
-    dots: true,
-    infinite: true,
-    speed: 500,
-    slidesToShow: 4,
-    slidesToScroll: 1,
-    spaceBetween : 500,
-
-    responsive: [
-      {
-        breakpoint: 1024,
-        settings: {
-          slidesToShow: 3,
-          slidesToScroll: 1,
-          infinite: true,
-          dots: true
-        }
-      },
-      {
-        breakpoint: 600,
-        settings: {
-          slidesToShow: 2,
-          slidesToScroll: 1,
-          initialSlide: 2
-        }
-      },
-      {
-        breakpoint: 480,
-        settings: {
-          slidesToShow: 1,
-          slidesToScroll: 1,
-        }
-      }
-    ]
-  };
+  useEffect(() => {
+    AOS.init({duration : 2000})
+  }, [])
 
   return (
-    <div className="w-full " >
-        <div className="md:bg-[url('/images/bg.svg')]  flex md:items-center  xs:justify-center md:justify-start bg-no-repeat xs:bg-[url('/images/bg_header_mobile.svg')]   bg-black-primary md:h-[40rem] xs:h-[28rem] xs:bg-bottom md:bg-right-bottom text-white " >
+    <div className="h-full" >
+        <div className="md:bg-[url('/images/bg.svg')]  flex md:items-center h-96 md:h-[calc(100vh_-_4rem)] xs:justify-center md:justify-start bg-no-repeat xs:bg-[url('/images/bg_header_mobile.svg')]   bg-black-primary xs:bg-bottom md:bg-right-bottom text-white " >
             <Wrapper>
-                  <div className="flex flex-col md:items-start xs:items-center justify-center xs:h-[60%] md:h-full" >
-                            <div className='text-[2.2rem] font-bold md:block xs:hidden' >
-                                    <h1 className="" >TẾT <br></br>VÀ <span className="text-pink-primary" >MÙA XUÂN</span></h1>
+                  <div className="flex flex-col md:items-start xs:items-center justify-center xs:h-[30%] md:h-full" >
+                            <div data-aos="fade-right"  className='text-[2.2rem] font-bold md:block xs:hidden md:leading-[92px] md:w-1/2' >
+                                    <h1  className="" >TẾT <br></br>VÀ <span className="text-pink-primary" >MÙA XUÂN</span></h1>
                             </div>
 
-                            <div >
+                            <div data-aos="fade-left"  >
                                     <Button>
                                     XEM HOA
                                     </Button>
@@ -74,7 +37,26 @@ const Home = () => {
       <div className = "bg-[url('/images/bg_home.svg')] w-full md:bg-no-repeat md:bg-center md:bg-cover  " >
         <Section>
                       <SectionBody>
-                          <Notify/>
+                          <Notify>
+                                          <div className="md:flex md:items-center " >
+                                        <Image
+                                            src="/images/tree.svg"
+                                            alt="Picture of the author"
+                                            width={50}
+                                            height={50}
+                                            className = "cursor-pointer md:block xs:hidden"
+                                        />
+
+                                        <div className="md:ml-5" >
+                                                        <span className="font-bold mr-2 " >Thông báo:</span>
+                                                        <span className="font-bold "  >Lan đã nở !</span>
+                                        </div>
+                                </div>
+
+                                <div className='md:ml-[200px]' >
+                                      Chúng tôi đã bắt đầu nhận đơn đặt hàng tại <span className='font-bold' >Chư Sê, Pleiku và Kon Tum</span> 
+                                </div>
+                          </Notify>
                       </SectionBody>
          </Section>
 
@@ -85,8 +67,8 @@ const Home = () => {
 
               <SectionBody>
                  
-                      <div className = "w-full " >
-                        <div className='flex items-center xs:flex-wrap lg:flex-nowrap gap-5 justify-between w-[90%] mt-20 mx-auto' >
+                      <div data-aos="fade-up"  >
+                        <div className='md:px-28 px-6 gap-4 mt-10 md:grid md:grid-cols-4 md:gap-x-[40px] ' >
                           <div className='flex items-start gap-2 ' >
                           <Image
                                 src="/images/row.svg"
@@ -195,7 +177,7 @@ const Home = () => {
          <Section>
                <SectionBody>
                     <Wrapper>
-                         <div className="flex items-center lg:flex-row xs:flex-col justify-center gap-14 mt-20 px-5" >
+                         <div className="flex items-center lg:flex-row xs:flex-col justify-center gap-14 px-5" >
                               
                                 <Image
                                         src="/images/blog-1.svg"
@@ -213,7 +195,7 @@ const Home = () => {
                                             alt="Picture of the author"
                                             width={284}
                                             height={213}
-                                            className = "cursor-pointer mt-10 rounded-xl object-cover  border-3 border-solid border-pink-primary"
+                                            className = "cursor-pointer mt-10 rounded-xl  h-auto md:w-auto w-1/2 border-3 border-solid border-pink-primary"
                                       />
                                       <p className="" >Cành Lan trao nhau ngày Tết và ý nghĩa của loài Lan Hồ Điệp</p>
                                   </div>
@@ -224,7 +206,7 @@ const Home = () => {
                                             alt="Picture of the author"
                                             width={284}
                                             height={213}
-                                            className = "cursor-pointer mt-10  rounded-xl object-cover  border-3 border-solid border-pink-primary"
+                                            className = "cursor-pointer mt-10 h-auto md:w-auto w-1/2  rounded-xl border-3 border-solid border-pink-primary"
                                       />
                                       <p className=""   >Cành Lan trao nhau ngày Tết và ý nghĩa của loài Lan Hồ Điệp</p>
                                   </div>
@@ -240,379 +222,7 @@ const Home = () => {
               </SectionTitle>
 
               <SectionBody>
-
-              <Wrapper>
-                  <Slider className='mt-20' {...settings}>
-                          <div className="" >
-                              <div className='rounded-xl object-cover w-full  border-5 overflow-hidden border-solid border-pink-primary' >
-                                      <Image
-                                              src="/images/c2.webp"
-                                              alt="Picture of the author"
-                                              width={376.68}
-                                              height={376.68}
-                                              className = "cursor-pointer object-contain"
-                                        />
-
-                                        <div className="flex items-center justify-between w-full bg-[#fbcfbd] " >
-                                          <div className="pl-10" >
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                          </div>
-
-                                          <div  className="pr-10"  >
-                                              <Image
-                                                  src="/images/fb.svg"
-                                                  alt="Picture of the author"
-                                                  width={75}
-                                                  height={75}
-                                                  className = "cursor-pointer "
-                                                />
-
-                                                <p>Nhắn tin</p>
-                                          </div>
-                                        </div>
-                              </div>
-                          </div>
-                          <div>
-                              <div className='rounded-xl object-cover  border-5 overflow-hidden border-solid border-pink-primary' >
-                                      <Image
-                                              src="/images/c2.webp"
-                                              alt="Picture of the author"
-                                              width={376.68}
-                                              height={376.68}
-                                              className = "cursor-pointer object-contain"
-                                        />
-
-                                        <div className="flex items-center justify-between w-full bg-[#fbcfbd] " >
-                                          <div className="pl-10" >
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                          </div>
-
-                                          <div  className="pr-10"  >
-                                              <Image
-                                                  src="/images/fb.svg"
-                                                  alt="Picture of the author"
-                                                  width={75}
-                                                  height={75}
-                                                  className = "cursor-pointer "
-                                                />
-
-                                                <p>Nhắn tin</p>
-                                          </div>
-                                        </div>
-                              </div>
-                          </div>
-                          <div>
-                              <div className='rounded-xl object-cover  border-5 overflow-hidden border-solid border-pink-primary' >
-                                      <Image
-                                              src="/images/c2.webp"
-                                              alt="Picture of the author"
-                                              width={376.68}
-                                              height={376.68}
-                                              className = "cursor-pointer object-contain"
-                                        />
-
-                                        <div className="flex items-center justify-between w-full bg-[#fbcfbd] " >
-                                          <div className="pl-10" >
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                          </div>
-
-                                          <div  className="pr-10"  >
-                                              <Image
-                                                  src="/images/fb.svg"
-                                                  alt="Picture of the author"
-                                                  width={75}
-                                                  height={75}
-                                                  className = "cursor-pointer "
-                                                />
-
-                                                <p>Nhắn tin</p>
-                                          </div>
-                                        </div>
-                              </div>
-                          </div>
-                          <div>
-                              <div className='rounded-xl object-cover  border-5 overflow-hidden border-solid border-pink-primary' >
-                                      <Image
-                                              src="/images/c2.webp"
-                                              alt="Picture of the author"
-                                              width={376.68}
-                                              height={376.68}
-                                              className = "cursor-pointer object-contain"
-                                        />
-
-                                        <div className="flex items-center justify-between w-full bg-[#fbcfbd] " >
-                                          <div className="pl-10" >
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                          </div>
-
-                                          <div  className="pr-10"  >
-                                              <Image
-                                                  src="/images/fb.svg"
-                                                  alt="Picture of the author"
-                                                  width={75}
-                                                  height={75}
-                                                  className = "cursor-pointer "
-                                                />
-
-                                                <p>Nhắn tin</p>
-                                          </div>
-                                        </div>
-                              </div>
-                          </div>
-                          <div>
-                              <div className='rounded-xl object-cover  border-5 overflow-hidden border-solid border-pink-primary' >
-                                      <Image
-                                              src="/images/c2.webp"
-                                              alt="Picture of the author"
-                                              width={376.68}
-                                              height={376.68}
-                                              className = "cursor-pointer object-contain"
-                                        />
-
-                                        <div className="flex items-center justify-between w-full bg-[#fbcfbd] " >
-                                          <div className="pl-10" >
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                          </div>
-
-                                          <div  className="pr-10"  >
-                                              <Image
-                                                  src="/images/fb.svg"
-                                                  alt="Picture of the author"
-                                                  width={75}
-                                                  height={75}
-                                                  className = "cursor-pointer "
-                                                />
-
-                                                <p>Nhắn tin</p>
-                                          </div>
-                                        </div>
-                              </div>
-                          </div>
-                          <div>
-                              <div className='rounded-xl object-cover  border-5 overflow-hidden border-solid border-pink-primary' >
-                                      <Image
-                                              src="/images/c2.webp"
-                                              alt="Picture of the author"
-                                              width={376.68}
-                                              height={376.68}
-                                              className = "cursor-pointer object-contain"
-                                        />
-
-                                        <div className="flex items-center justify-between w-full bg-[#fbcfbd] " >
-                                          <div className="pl-10" >
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                              <div className="flex items-center gap-2" >
-                                                        <Image
-                                                            src="/images/arrow_2.svg"
-                                                            alt="Picture of the author"
-                                                            width={18}
-                                                            height={18}
-                                                            className = ""
-                                                          />
-
-                                                          <p className="font-bold" >Mini + cao</p>
-                                              </div>
-                                          </div>
-
-                                          <div  className="pr-10"  >
-                                              <Image
-                                                  src="/images/fb.svg"
-                                                  alt="Picture of the author"
-                                                  width={75}
-                                                  height={75}
-                                                  className = "cursor-pointer "
-                                                />
-
-                                                <p>Nhắn tin</p>
-                                          </div>
-                                        </div>
-                              </div>
-                          </div>
-                        
-                  </Slider>
-              </Wrapper>
-            
+                 <Slide/>
               </SectionBody>
          </Section>
       </div>  

@@ -7,7 +7,7 @@ import { useRouter } from "next/router";
 
 const Header = () => {
 
-  const router = useRouter()
+  const router = useRouter();
 
  
   return (

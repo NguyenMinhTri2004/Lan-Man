@@ -4,7 +4,7 @@ import Image from 'next/image'
 
 export const SectionBody = ({children} : any) => {
   return (
-    <div className="w-full lg:px-2 sm:px-1 xs:px-1 md:px-1 py-2 " >
+    <div className="lg:px-2 sm:px-1 xs:px-1 md:px-1 py-2 " >
          {children}
     </div>
   )
@@ -12,7 +12,7 @@ export const SectionBody = ({children} : any) => {
 
 export const SectionTitle = ({children , color} : any) => {
   return (
-    <div className="w-full flex items-center   py-2 text-black ">
+    <div className=" flex items-center w-full text-black ">
         <div className="" >
             {
                 color == "white" ?
@@ -21,7 +21,7 @@ export const SectionTitle = ({children , color} : any) => {
                       alt="Picture of the author"
                       width={384}
                       height={27.75}
-                      className = "cursor-pointer lg:w-[384px] xs:w-full xs:h-full "
+                      className = "cursor-pointer  w-full lg:w-[384px]"
                       />:
 
                       <Image
@@ -29,15 +29,15 @@ export const SectionTitle = ({children , color} : any) => {
                       alt="Picture of the author"
                       width={384}
                       height={27.75}
-                      className = "cursor-pointer lg:w-[384px] xs:w-full xs:h-full "
+                      className = "cursor-pointer  w-full lg:w-[384px] "
                       />
 
             }
           
         </div>
 
-        <div className=" flex items-center justify-center w-full h-fit" >
-            <div className="font-bold lg:text-[3.2rem]  md:text-[2rem] xs:text-2xl text-center" >{children}</div>
+        <div className=" flex items-center justify-center mx-auto w-full h-fit" >
+            <div className="font-bold lg:text-[3.2rem] leading-[33px] md:leading-[90px] md:text-[2rem] xs:text-2xl text-center" >{children}</div>
         </div>
 
         <div className=" flex justify-end" >
@@ -49,7 +49,7 @@ export const SectionTitle = ({children , color} : any) => {
                     alt="Picture of the author"
                     width={384}
                     height={27.75}
-                    className = "cursor-pointer lg:w-[384px] xs:w-full xs:h-full  "
+                    className = "cursor-pointer w-full lg:w-[384px] "
                     />
                     :
 
@@ -58,7 +58,7 @@ export const SectionTitle = ({children , color} : any) => {
                     alt="Picture of the author"
                     width={384}
                     height={27.75}
-                    className = "cursor-pointer lg:w-[384px] xs:w-full xs:h-full  "
+                    className = "cursor-pointer  w-full lg:w-[384px]"
                     />
 
             }
@@ -71,7 +71,7 @@ export const SectionTitle = ({children , color} : any) => {
 
 const Section = ({children} : any) => {
   return (
-    <div className='py-10 w-full'>
+    <div className='py-2 w-full'>
           {children}
     </div>
   )

@@ -34,7 +34,26 @@ const About = () => {
             <div>
                 <Section>
                           <SectionBody>
-                              <Notify/>
+                              <Notify>
+                              <div className="md:flex md:items-center " >
+                                        <Image
+                                            src="/images/tree.svg"
+                                            alt="Picture of the author"
+                                            width={50}
+                                            height={50}
+                                            className = "cursor-pointer md:block xs:hidden"
+                                        />
+
+                                        <div className="md:ml-5" >
+                                                        <span className="font-bold mr-2 " >Thông báo:</span>
+                                                        <span className="font-bold "  >Lan đã nở !</span>
+                                        </div>
+                                </div>
+
+                                <div className='md:ml-[200px]' >
+                                    Chúng tôi đã bắt đầu nhận đơn đặt hàng tại <span className='font-bold' >Chư Sê, Pleiku và Kon Tum</span> 
+                                </div>
+                              </Notify>
                           </SectionBody>
                  </Section>
             </div>

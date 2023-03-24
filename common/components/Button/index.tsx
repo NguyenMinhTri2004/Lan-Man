@@ -5,9 +5,11 @@ import Link from 'next/link'
 
 const Button = ({children} : any) => {
   return (
-    <div className="bg-pink-primary w-40 hover:scale-125 ease-in-out duration-300 transition hover:bg-transparent border border-solid border-pink-primary   h-10 text-white flex items-center justify-center cursor-pointer" >
-            <p className="text-sm font-semibold" >{children}</p>
-    </div>
+    <Link href = "/flowers" >
+      <div className="bg-pink-primary w-[10rem] mx-2 hover:text-pink-primary hover:scale-[1.2] ease-in-out duration-300 transition hover:bg-transparent border-2 border-solid border-pink-primary h-[2.7rem] text-white flex items-center justify-center cursor-pointer" >
+              <p className="text-sm font-semibold" >{children}</p>
+      </div>
+    </Link>
   )
 }
 
@@ -15,7 +17,7 @@ export const ToTopButton = () => {
 
     const router = useRouter();
     return (
-         <Link href = {`/${router.pathname}`} className="fixed bottom-8 right-8" >
+         <Link href = {`/${router.pathname}`} className="fixed z-[10] bottom-8 right-10" >
              <Image
                         src="/images/back-to-top.webp"
                         alt="Picture of the author"

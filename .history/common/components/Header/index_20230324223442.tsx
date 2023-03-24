@@ -7,11 +7,11 @@ import { useRouter } from "next/router";
 
 const Header = () => {
 
-  const router = useRouter()
+  const router = useRouter();
 
  
   return (
-    <div className="fixed top-0 w-full z-[10] bg-black-primary text-white font-bold text-base overflow-hidden" >
+    <div className="fixed top-0  z-[10] bg-black-primary text-white font-bold text-base overflow-hidden" >
         <Wrapper>
               <div className="flex items-center md:justify-center xs:justify-between w-[93%]" >
                 <Link href = "/" >

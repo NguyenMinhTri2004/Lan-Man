@@ -43,7 +43,7 @@ const Footer = () => {
                   </Wrapper>
           
 
-                  <div className="bg-[url('/images/bg_footer2.png')] bg-no-repeat  flex items-center justify-center h-[50rem] bg-cover" >
+                  <div className="bg-[url('/images/bg_footer2.png')] bg-no-repeat  flex items-center justify-center h-[50rem] bg-cover w-full" >
                             <div className='text-white w-[80%] mt-24 h-[26rem] backdrop-blur-lg bg-[#c4c4c428] backdrop-filter p-20 rounded-2xl' >
                                   <div className='w-full flex items-center justify-center mb-2' >
                                       <Image
