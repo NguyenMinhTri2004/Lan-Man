@@ -1,0 +1,33 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+}
+
+a {
+   text-decoration: none;
+}
+
+p {
+  margin : 0px;
+}
+
+/* .swiper-slide {
+      margin-right: 18px!important;
+} */
+
+  /* the parent */
+.slick-list {
+      margin: 0 -27px;
+
+      height : 600px;
+}
+
+.swiper-pagination-bullet {
+    width : 18px!important;
+    height : 18px!important; 
+    border-radius : 100%!important;
+    background-color : #d9706a!important;
+}
