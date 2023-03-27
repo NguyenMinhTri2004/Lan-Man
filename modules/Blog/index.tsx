@@ -11,7 +11,7 @@ import Blogs from "@/common/components/Blogs";
 const Blog = () => {
   return (
     <div className="bg-no-repeat bg-cover pt-2 bg-[url('/images/bg-about.png')]">
-      <div className="md:bg-[#222831fe]  text-white">
+      <div className="bg-[#222831fe]  text-white">
         <Section>
           <SectionTitle color="white">
             <p className="text-white"> Mọi người quan tâm</p>
@@ -23,7 +23,7 @@ const Blog = () => {
         </Section>
       </div>
 
-      <div className=" ">
+      <div className="md:bg-none xs:bg-[url('/images/bg-about.png')] bg-no-repeat bg-cover ">
         <Section>
           <SectionBody>
             <Notify>
