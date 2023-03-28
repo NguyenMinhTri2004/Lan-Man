@@ -7,7 +7,7 @@ export const SectionBody = ({ children }: any) => {
 
 export const SectionTitle = ({ children, color }: any) => {
   return (
-    <div className="flex my-5 ">
+    <div className="flex my-5 main-title">
       {color == "white" ? (
         <Image
           src="/images/right-arrow-white.svg"

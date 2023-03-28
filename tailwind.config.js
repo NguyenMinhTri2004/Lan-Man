@@ -42,9 +42,9 @@ module.exports = {
       },
       fontFamily: {
         // body: ['Open Sans', 'sans-serif'],
-        body: ["hk_grotesk", "sans-serif"],
-        inter: ["Inter", "sans-serif"],
-        cabinet: ["Cabinet Grotesk", "sans-serif"],
+        // body: ["hk_grotesk", "sans-serif"],
+        // inter: ["Inter", "sans-serif"],
+        // cabinet: ["Cabinet Grotesk", "sans-serif"],
         imb : ["IMB Flex Sans","sans-serif"]
       },
       fontSize: {

@@ -8,8 +8,94 @@ import "swiper/css/scrollbar";
 import Image from "next/image";
 
 const Slide = () => {
+  const slideList = [
+    {
+      image: "c2.webp",
+      description: [
+        {
+          display: "Mini + cao",
+        },
+
+        {
+          display: "Mini + cao",
+        },
+
+        {
+          display: "Mini + cao",
+        },
+      ],
+    },
+
+    {
+      image: "c2.webp",
+      description: [
+        {
+          display: "Mini + cao",
+        },
+
+        {
+          display: "Mini + cao",
+        },
+
+        {
+          display: "Mini + cao",
+        },
+      ],
+    },
+
+    {
+      image: "c2.webp",
+      description: [
+        {
+          display: "Mini + cao",
+        },
+
+        {
+          display: "Mini + cao",
+        },
+
+        {
+          display: "Mini + cao",
+        },
+      ],
+    },
+
+    {
+      image: "c2.webp",
+      description: [
+        {
+          display: "Mini + cao",
+        },
+
+        {
+          display: "Mini + cao",
+        },
+
+        {
+          display: "Mini + cao",
+        },
+      ],
+    },
+
+    {
+      image: "c2.webp",
+      description: [
+        {
+          display: "Mini + cao",
+        },
+
+        {
+          display: "Mini + cao",
+        },
+
+        {
+          display: "Mini + cao",
+        },
+      ],
+    },
+  ];
   return (
-    <div className="md:mx-5">
+    <div className="md:mx-5 second-title">
       <div>
         <Swiper
           className="mt-10 w-[85%]  h-[630px]"
@@ -52,325 +138,58 @@ const Slide = () => {
             },
           }}
         >
-          <SwiperSlide>
-            <div className="rounded-[2em] md:w-full  grid border-5 overflow-hidden border-solid border-pink-primary">
-              <Image
-                src="/images/c2.webp"
-                alt="Picture of the author"
-                width={500}
-                height={500}
-                className="cursor-pointer object-cover h-auto w-full"
-              />
-
-              <div className="flex items-center h-auto justify-between bg-[#fbcfbd] ">
-                <div className="pl-10">
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-                </div>
-
-                <div className="pr-10 flex flex-col items-center justify-center gap-6">
+          {slideList?.map((item, index) => {
+            return (
+              <SwiperSlide key={index}>
+                <div className="rounded-[2em] md:w-full  grid border-5 overflow-hidden border-solid border-pink-primary">
                   <Image
-                    src="/images/fb.svg"
+                    src={`/images/${item.image}`}
                     alt="Picture of the author"
-                    width={75}
-                    height={75}
-                    className="cursor-pointer "
+                    width={500}
+                    height={500}
+                    className="cursor-pointer object-cover h-auto w-full"
                   />
 
-                  <p className="font-bold md:text-2xl xs:text-base">Nhắn tin</p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
+                  <div className="flex items-center h-auto justify-between bg-[#fbcfbd] ">
+                    <div className="pl-10">
+                      {item.description.map((item, index) => {
+                        return (
+                          <div
+                            key={index}
+                            className="flex items-center gap-3 my-8"
+                          >
+                            <Image
+                              src="/images/arrow_2.svg"
+                              alt="Picture of the author"
+                              width={18}
+                              height={18}
+                              className=""
+                            />
 
-          <SwiperSlide>
-            <div className="rounded-[2em] md:w-full  grid border-5 overflow-hidden border-solid border-pink-primary">
-              <Image
-                src="/images/c2.webp"
-                alt="Picture of the author"
-                width={500}
-                height={500}
-                className="cursor-pointer object-cover h-auto w-full"
-              />
+                            <p className="font-bold">{item.display}</p>
+                          </div>
+                        );
+                      })}
+                    </div>
 
-              <div className="flex items-center h-auto justify-between bg-[#fbcfbd] ">
-                <div className="pl-10">
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
+                    <div className="pr-10 flex flex-col items-center justify-center gap-6">
+                      <Image
+                        src="/images/fb.svg"
+                        alt="Picture of the author"
+                        width={75}
+                        height={75}
+                        className="cursor-pointer "
+                      />
 
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
+                      <p className="font-bold md:text-2xl xs:text-base">
+                        Nhắn tin
+                      </p>
+                    </div>
                   </div>
                 </div>
-
-                <div className="pr-10 flex flex-col items-center justify-center gap-6">
-                  <Image
-                    src="/images/fb.svg"
-                    alt="Picture of the author"
-                    width={75}
-                    height={75}
-                    className="cursor-pointer "
-                  />
-
-                  <p className="font-bold text-2xl">Nhắn tin</p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="rounded-[2em] md:w-full  grid border-5 overflow-hidden border-solid border-pink-primary">
-              <Image
-                src="/images/c2.webp"
-                alt="Picture of the author"
-                width={500}
-                height={500}
-                className="cursor-pointer object-cover h-auto w-full"
-              />
-
-              <div className="flex items-center h-auto justify-between bg-[#fbcfbd] ">
-                <div className="pl-10">
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-                </div>
-
-                <div className="pr-10 flex flex-col items-center justify-center gap-6">
-                  <Image
-                    src="/images/fb.svg"
-                    alt="Picture of the author"
-                    width={75}
-                    height={75}
-                    className="cursor-pointer "
-                  />
-
-                  <p className="font-bold text-2xl">Nhắn tin</p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="rounded-[2em] md:w-full  grid border-5 overflow-hidden border-solid border-pink-primary">
-              <Image
-                src="/images/c2.webp"
-                alt="Picture of the author"
-                width={500}
-                height={500}
-                className="cursor-pointer object-cover h-auto w-full"
-              />
-
-              <div className="flex items-center h-auto justify-between bg-[#fbcfbd] ">
-                <div className="pl-10">
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-                </div>
-
-                <div className="pr-10 flex flex-col items-center justify-center gap-6">
-                  <Image
-                    src="/images/fb.svg"
-                    alt="Picture of the author"
-                    width={75}
-                    height={75}
-                    className="cursor-pointer "
-                  />
-
-                  <p className="font-bold text-2xl">Nhắn tin</p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
-
-          <SwiperSlide>
-            <div className="rounded-[2em] md:w-full  grid border-5 overflow-hidden border-solid border-pink-primary">
-              <Image
-                src="/images/c2.webp"
-                alt="Picture of the author"
-                width={500}
-                height={500}
-                className="cursor-pointer object-cover h-auto w-full"
-              />
-
-              <div className="flex items-center h-auto justify-between bg-[#fbcfbd] ">
-                <div className="pl-10">
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-
-                  <div className="flex items-center gap-3 my-8">
-                    <Image
-                      src="/images/arrow_2.svg"
-                      alt="Picture of the author"
-                      width={18}
-                      height={18}
-                      className=""
-                    />
-
-                    <p className="font-bold">Mini + cao</p>
-                  </div>
-                </div>
-
-                <div className="pr-10 flex flex-col items-center justify-center gap-6">
-                  <Image
-                    src="/images/fb.svg"
-                    alt="Picture of the author"
-                    width={75}
-                    height={75}
-                    className="cursor-pointer "
-                  />
-
-                  <p className="font-bold text-2xl">Nhắn tin</p>
-                </div>
-              </div>
-            </div>
-          </SwiperSlide>
+              </SwiperSlide>
+            );
+          })}
 
           <div className="swiper-pagination"></div>
         </Swiper>

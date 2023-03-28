@@ -9,10 +9,27 @@ import Modal from "../Modal";
 const Header = () => {
   const router = useRouter();
 
+  const navBar = [
+    {
+      display: "TRANG CHỦ",
+      link: "/",
+    },
+
+    {
+      display: "BÀI VIẾT",
+      link: "/blogs",
+    },
+
+    {
+      display: "THÔNG TIN SHOP",
+      link: "/about",
+    },
+  ];
+
   const [open, setOpen] = useState(false);
 
   return (
-    <div className="fixed top-0 w-full z-[100]  bg-black-primary text-white font-bold text-base overflow-hidden">
+    <div className="fixed top-0 w-full z-[100] main-title bg-black-primary text-white font-bold text-base overflow-hidden">
       <Wrapper>
         <div className="flex items-center md:justify-center xs:justify-between w-[93%]">
           <Link href="/">
@@ -25,45 +42,26 @@ const Header = () => {
             />
           </Link>
 
-          <div className="cursor-pointer mx-auto  md:block xs:hidden ">
-            <Link href="/">
-              <p
-                className={` ${
-                  router.pathname === "/" ? "text-pink-primary" : "text-white"
-                }  no-underline hover:text-pink-primary`}
+          {navBar.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="cursor-pointer mx-auto  md:block xs:hidden "
               >
-                TRANG CHỦ
-              </p>
-            </Link>
-          </div>
-
-          <div className="cursor-pointer mx-auto  md:block xs:hidden ">
-            <Link href="/blogs">
-              <p
-                className={` ${
-                  router.pathname === "/blogs"
-                    ? "text-pink-primary"
-                    : "text-white"
-                }  no-underline hover:text-pink-primary`}
-              >
-                BÀI VIẾT
-              </p>
-            </Link>
-          </div>
-
-          <div className="cursor-pointer  mx-auto md:block xs:hidden ">
-            <Link href="/about">
-              <p
-                className={` ${
-                  router.pathname === "/about"
-                    ? "text-pink-primary"
-                    : "text-white"
-                }  no-underline hover:text-pink-primary`}
-              >
-                THÔNG TIN SHOP
-              </p>
-            </Link>
-          </div>
+                <Link href={item.link}>
+                  <p
+                    className={` ${
+                      router.pathname === item.link
+                        ? "text-pink-primary"
+                        : "text-white"
+                    }  no-underline hover:text-pink-primary`}
+                  >
+                    {item.display}
+                  </p>
+                </Link>
+              </div>
+            );
+          })}
 
           <div className="cursor-pointer ml-auto  md:block xs:hidden">
             <Button>XEM HOA</Button>

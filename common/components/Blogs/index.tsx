@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const Blogs = () => {
   return (
-    <div className="flex items-center lg:flex-row xs:flex-col justify-center mt-5 md:gap-12 xs:gap-0 md:px-14 xs:px-0">
+    <div className="flex items-center lg:flex-row xs:flex-col main-title justify-center mt-5 md:gap-12 xs:gap-0 md:px-14 xs:px-0">
       <div className="h-fit">
         <Image
           src="/images/blog-1.svg"

@@ -16,7 +16,7 @@ const About = () => {
           </SectionTitle>
 
           <SectionBody>
-            <ul className="md:text-4xl xs:text-base md:w-[78%] mx-auto md:mb-[60px] xs:mb-5">
+            <ul className="md:text-4xl xs:text-base md:w-[78%] mx-auto md:mb-[60px] second-title xs:mb-5">
               <li className="md:mb-5 xs:md-2">
                 Là đơn vị cung cấp công nghệ Tự động hóa & IoT cho các nhà kính
                 Lan Hồ Điệp của các công ty lớn như Apollo, Lan Anh, Kim Phát,
@@ -40,7 +40,7 @@ const About = () => {
       <div className="bg-no-repeat bg-contain 2xl:bg-cover bg-[url('/images/bg-about.png')">
         <Section>
           <SectionBody>
-            <Notify>
+             <Notify>
               <div className="md:flex md:items-center ">
                 <Image
                   src="/images/tree.svg"
@@ -50,15 +50,15 @@ const About = () => {
                   className="cursor-pointer md:block xs:hidden"
                 />
 
-                <div className="md:ml-5">
+                <div className="md:ml-5 main-title">
                   <span className="font-bold mr-2 ">Thông báo:</span>
                   <span className="font-bold ">Lan đã nở !</span>
                 </div>
               </div>
 
-              <div className="md:ml-[200px]">
+              <div className="md:ml-[200px] second-title">
                 Chúng tôi đã bắt đầu nhận đơn đặt hàng tại{" "}
-                <span className="font-bold">Chư Sê, Pleiku và Kon Tum</span>
+                <span className="font-bold main-title">Chư Sê, Pleiku và Kon Tum</span>
               </div>
             </Notify>
           </SectionBody>
@@ -67,7 +67,7 @@ const About = () => {
         <Section>
           <SectionTitle>Nguồn Lan & Công nghệ</SectionTitle>
           <SectionBody>
-            <div className="md:text-3xl md:px-10 xs:text-base mt-10 md:leading-[45px] text-justify">
+            <div className="md:text-3xl md:px-10 xs:text-base mt-10 second-title md:leading-[45px] text-justify">
               <p className="md:px-10 xs:px-0">
                 Dưới đây là một số hình ảnh được ghi lại trực tiếp tại các nhà
                 kính Lan Hồ Điệp hiện đại, với chủ nhà kính là đối tác với chúng
@@ -142,7 +142,7 @@ const About = () => {
                 </p>
               </div>
 
-              <div className="font-medium ">
+              <div className="text-4xl md:px-10 xs:px-0">
                 <p>
                   Nhờ việc áp dụng công nghệ, kỹ thuật vào việc chăm sóc Lan Hồ
                   Điệp, đặc biệt là đảm bảo điều kiện nhiệt độ - độ ẩm - ánh

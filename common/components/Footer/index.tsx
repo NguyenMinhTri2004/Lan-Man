@@ -1,13 +1,47 @@
 import React from "react";
-import Wrapper from "../Wrapper";
 import Image from "next/image";
 import Button from "../Button";
 
 const Footer = () => {
+  const locationList = [
+    {
+      display: "856 Hùng Vương, TT. Chư Sê, h. Chư Sê, Gia Lai",
+    },
+
+    {
+      display: "856 Hùng Vương, TT. Chư Sê, h. Chư Sê, Gia Lai",
+    },
+
+    {
+      display: "856 Hùng Vương, TT. Chư Sê, h. Chư Sê, Gia Lai",
+    },
+  ];
+
+  const Page = [
+    {
+      display: "TRANG CHỦ",
+    },
+
+    {
+      display: "TRANG CHỦ",
+    },
+
+    {
+      display: "TRANG CHỦ",
+    },
+
+    {
+      display: "TRANG CHỦ",
+    },
+
+    {
+      display: "TRANG CHỦ",
+    },
+  ];
   return (
     <div className="overflow-hidden mt-5">
       <div className="">
-        <div className="flex  xs:flex-col xs:text-[9px] md:text-base md:flex-row items-center md:gap-5 xs:gap-0 justify-center mb-20 text-center">
+        <div className="flex main-title xs:flex-col xs:text-[9px] md:text-base md:flex-row items-center md:gap-5 xs:gap-0 justify-center mb-20 text-center">
           <div className="flex items-center gap-5">
             <h1>Vào</h1>
             <Button>XEM HOA</Button>
@@ -18,7 +52,7 @@ const Footer = () => {
           </h1>
         </div>
 
-        <div className="bg-[url('/images/footer_bg1.svg')] bg-no-repeat   h-fit flex items-center justify-between xs:px-5 md:px-16 bg-left-bottom bg-contain">
+        <div className="bg-[url('/images/footer_bg1.svg')] bg-no-repeat  main-title h-fit flex items-center justify-between xs:px-5 md:px-16 bg-left-bottom bg-contain">
           <div className="w-[52%] font-bold  md:text-7xl xs:text-2xl md:leading-[94px] leading-[35px]">
             Đã đến lúc
             <br></br>
@@ -38,7 +72,7 @@ const Footer = () => {
           </div>
         </div>
 
-        <div className="md:bg-[url('/images/bg_footer2.png')] bg-[url('/images/bg-footer-mobile.png')] bg-no-repeat bg-center md:bg-top-center h-full text-white bg-cover pt-24 p-10 md:p-16 md:pt-60">
+        <div className="md:bg-[url('/images/bg_footer2.png')] second-title bg-[url('/images/bg-footer-mobile.png')] bg-no-repeat bg-center md:bg-top-center h-full text-white bg-cover pt-24 p-10 md:p-16 md:pt-60">
           <div className="backdrop-blur-lg h-full bg-[#c4c4c428] grid md:px-36 px-10 md:py-16 md:-pt-20 md:-mt-20 py-10 rounded-[20px]">
             <div className="w-full flex items-center justify-center mb-2">
               <Image
@@ -60,119 +94,43 @@ const Footer = () => {
 
             <div className="flex md:text-2xl xs:text-sm md:flex-row xs:flex-col h-fit md:items-center xs:items-start justify-between">
               <ul className="md:block xs:hidden">
-                <li className="flex items-center gap-2 my-16">
-                  <Image
-                    src="/images/location.svg"
-                    alt="Picture of the author"
-                    width={20}
-                    height={20}
-                    className=""
-                  />
+                {locationList.map((item, index) => {
+                  return (
+                    <li key={index} className="flex items-center gap-2 my-16">
+                      <Image
+                        src="/images/location.svg"
+                        alt="Picture of the author"
+                        width={20}
+                        height={20}
+                        className=""
+                      />
 
-                  <p className="cursor-pointer hover:text-pink-primary">
-                    856 Hùng Vương, TT. Chư Sê, h. Chư Sê, Gia Lai
-                  </p>
-                </li>
-
-                <li className="flex items-center gap-2 my-16">
-                  <Image
-                    src="/images/location.svg"
-                    alt="Picture of the author"
-                    width={20}
-                    height={20}
-                    className=""
-                  />
-
-                  <p className="cursor-pointer hover:text-pink-primary">
-                    856 Hùng Vương, TT. Chư Sê, h. Chư Sê, Gia Lai
-                  </p>
-                </li>
-
-                <li className="flex items-center gap-2 my-16">
-                  <Image
-                    src="/images/location.svg"
-                    alt="Picture of the author"
-                    width={20}
-                    height={20}
-                    className=""
-                  />
-
-                  <p className="cursor-pointer hover:text-pink-primary">
-                    856 Hùng Vương, TT. Chư Sê, h. Chư Sê, Gia Lai
-                  </p>
-                </li>
+                      <p className="cursor-pointer hover:text-pink-primary">
+                        {item.display}
+                      </p>
+                    </li>
+                  );
+                })}
               </ul>
 
               <ul className="md:mt-10 ">
-                <li className="flex items-center gap-2 mb-4">
-                  <Image
-                    src="/images/arrow.svg"
-                    alt="Picture of the author"
-                    width={30}
-                    height={25}
-                    className=""
-                  />
+                {Page.map((item, index) => {
+                  return (
+                    <li key={index} className="flex items-center gap-2 mb-4">
+                      <Image
+                        src="/images/arrow.svg"
+                        alt="Picture of the author"
+                        width={30}
+                        height={25}
+                        className=""
+                      />
 
-                  <p className="cursor-pointer hover:text-pink-primary">
-                    TRANG CHỦ
-                  </p>
-                </li>
-
-                <li className="flex items-center gap-2 mb-4">
-                  <Image
-                    src="/images/arrow.svg"
-                    alt="Picture of the author"
-                    width={30}
-                    height={25}
-                    className=""
-                  />
-
-                  <p className="cursor-pointer hover:text-pink-primary">
-                    TRANG CHỦ
-                  </p>
-                </li>
-
-                <li className="flex items-center gap-2 mb-4">
-                  <Image
-                    src="/images/arrow.svg"
-                    alt="Picture of the author"
-                    width={30}
-                    height={25}
-                    className=""
-                  />
-
-                  <p className="cursor-pointer hover:text-pink-primary">
-                    TRANG CHỦ
-                  </p>
-                </li>
-
-                <li className="flex items-center gap-2 mb-4">
-                  <Image
-                    src="/images/arrow.svg"
-                    alt="Picture of the author"
-                    width={30}
-                    height={25}
-                    className=""
-                  />
-
-                  <p className="cursor-pointer hover:text-pink-primary">
-                    TRANG CHỦ
-                  </p>
-                </li>
-
-                <li className="flex items-center gap-2 mb-4">
-                  <Image
-                    src="/images/arrow.svg"
-                    alt="Picture of the author"
-                    width={30}
-                    height={25}
-                    className=""
-                  />
-
-                  <p className="cursor-pointer hover:text-pink-primary">
-                    TRANG CHỦ
-                  </p>
-                </li>
+                      <p className="cursor-pointer hover:text-pink-primary">
+                        {item.display}
+                      </p>
+                    </li>
+                  );
+                })}
               </ul>
             </div>
           </div>
